@@ -67,10 +67,10 @@ public class Home extends AppCompatActivity {
                 TextView textView1=v.findViewById(R.id.message_user);
                 TextView textView2=v.findViewById(R.id.message_time);
 
-                if (model.getMessageUser().equals(FirebaseAuth.getInstance().getCurrentUser().getEmail().toString())){
+               /* if (model.getMessageUser().equals(FirebaseAuth.getInstance().getCurrentUser().getEmail().toString())){
                        relativeLayout.setGravity(View.FOCUS_RIGHT);
 
-                }
+                }*/
                 //set text
                 textView.setText(model.getMessageText());
                 textView1.setText(model.getMessageUser());
