@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,6 +29,7 @@ import java.text.DateFormat;
 
 public class Home extends AppCompatActivity {
     private FirebaseListAdapter<ChatMessage> adapter;
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,13 +68,14 @@ public class Home extends AppCompatActivity {
                 TextView textView=v.findViewById(R.id.message_text);
                 TextView textView1=v.findViewById(R.id.message_user);
                 TextView textView2=v.findViewById(R.id.message_time);
-
-               /* if (model.getMessageUser().equals(FirebaseAuth.getInstance().getCurrentUser().getEmail().toString())){
+                Log.e("email",FirebaseAuth.getInstance().getCurrentUser().getEmail());
+               // Log.e("model email","jjjj"+model.getMessageUser());
+              /*  if (model.getMessageUser().equals(FirebaseAuth.getInstance().getCurrentUser().getEmail())){
                        relativeLayout.setGravity(View.FOCUS_RIGHT);
 
                 }*/
-                //set text
-                textView.setText(model.getMessageText());
+
+                               textView.setText(model.getMessageText());
                 textView1.setText(model.getMessageUser());
                 DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(getApplicationContext());
 
