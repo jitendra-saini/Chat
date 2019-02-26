@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GoogleSignIn"></activity>
+        <activity android:name=".GoogleSignInActivity"></activity>
         <activity android:name=".FirebaseMessaging" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".SignInActivity" />

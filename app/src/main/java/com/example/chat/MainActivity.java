@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
  }else{
 
-    Intent intent=new Intent(MainActivity.this,GoogleSignIn.class);
+     Intent intent=new Intent(MainActivity.this, GoogleSignInActivity.class);
      startActivity(intent);
      finish();
  }
